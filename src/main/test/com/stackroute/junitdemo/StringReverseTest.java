@@ -1,26 +1,36 @@
 package com.stackroute.junitdemo;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class StringReverseTest {
+   StringReverse stringReverse;
+    @Before
+    public void setUp() {
+    }
+    @After
+    public void tearDown(){
+        stringReverse=null;
+    }
 
     @Test
     public void givenStringsShouldReverse(){
         //arrange
-        StringReverse sr=new StringReverse();
+        StringReverse stringReverse=new StringReverse();
         //Act
-        String result= sr.reverse("Hello");
+        String result= stringReverse.reverse("Hello");
         //Assert
         assertEquals("olleH",result);
     }
     @Test
     public void givenStringsShouldReturnReverseWithMultipleSpaces(){
         //arrange
-        StringReverse sr=new StringReverse();
+        StringReverse stringReverse=new StringReverse();
         //Act
-        String result= sr.reverse("Hello world  !");
+        String result= stringReverse.reverse("Hello world  !");
         //Assert
         assertEquals("!  dlrow olleH",result);
     }
@@ -28,27 +38,27 @@ public class StringReverseTest {
     @Test
     public void givenStringsShouldReturnReversealphanumeric() {
         //arrange
-        StringReverse sr = new StringReverse();
+        StringReverse stringReverse = new StringReverse();
         //Act
-        String result = sr.reverse("1a2b3c");
+        String result = stringReverse.reverse("1a2b3c");
         //Assert
         assertEquals("c3b2a1", result);
     }
     @Test
     public void givenStringsShouldReturnReverseEmptyString() {
         //arrange
-        StringReverse sr = new StringReverse();
+        StringReverse stringReverse = new StringReverse();
         //Act
-        String result = sr.reverse("");
+        String result = stringReverse.reverse("");
         //Assert
         assertEquals("", result);
     }
     @Test
     public void givenStringsShouldReturnReverseStringWithOneSpace() {
         //arrange
-        StringReverse sr = new StringReverse();
+        StringReverse stringReverse = new StringReverse();
         //Act
-        String result = sr.reverse(" ");
+        String result = stringReverse.reverse(" ");
         //Assert
         assertEquals(" ", result);
     }
@@ -56,9 +66,9 @@ public class StringReverseTest {
     @Test
     public void givenStringsShouldReturnReverseStringSpecialCharacters() {
         //arrange
-        StringReverse sr = new StringReverse();
+        StringReverse stringReverse = new StringReverse();
         //Act
-        String result = sr.reverse("@#$%^&*()");
+        String result = stringReverse.reverse("@#$%^&*()");
         //Assert
         assertEquals(")(*&^%$#@", result);
     }

@@ -6,55 +6,39 @@ import static org.junit.Assert.*;
 
 public class VowelConsonantTest {
 
-    VowelConsonant vc;
+    VowelConsonant vowelConsonant;
     @Before
     public void setUp() {
-        System.out.println("Before");
-
-
     }
     @After
     public void tearDown(){
-        System.out.println("After");
-        vc=null;
-
+        vowelConsonant=null;
     }
-    @BeforeClass
-    public static void setUpBeforeClass() {
-        System.out.println("BeforeClass");
 
-
-    }
-    @AfterClass
-    public static void tearDownAfterClass(){
-        System.out.println("AfterClass");
-
-
-    }
     @Test
     public void givenStringShouldReturnVowelConsonant(){
         //arrange
-        VowelConsonant vc=new VowelConsonant();
+        VowelConsonant vowelConsonant=new VowelConsonant();
         //Act
-        String result= vc.character("aB");
+        String result= vowelConsonant.character("aB");
         //Assert
         assertEquals("VowelConsonant",result);
     }
     @Test
     public void givenStringShouldReturnConsonantConsonantVowel(){
         //arrange
-        VowelConsonant vc=new VowelConsonant();
+        VowelConsonant vowelConsonant=new VowelConsonant();
         //Act
-        String result= vc.character("Pra");
+        String result= vowelConsonant.character("Pra");
         //Assert
         assertEquals("ConsonantConsonantVowel",result);
     }
     @Test
     public void givenStringShouldReturnConsonantVowelNotAlphabet(){
         //arrange
-        VowelConsonant vc=new VowelConsonant();
+        VowelConsonant vowelConsonant=new VowelConsonant();
         //Act
-        String result= vc.character("pE*");
+        String result= vowelConsonant.character("pE*");
         //Assert
         assertEquals("ConsonantVowelNot a Alphabet",result);
     }
