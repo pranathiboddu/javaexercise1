@@ -30,7 +30,7 @@ public class NumberPatternTest {
         //Act
         String result= numberPattern.iteration(0);
         //Assert
-        assertEquals("Entered zero",result);
+        assertNotEquals("Entered negative number",result);
     }
     @Test
     public void givenNumberShouldIterateFiveTimes(){

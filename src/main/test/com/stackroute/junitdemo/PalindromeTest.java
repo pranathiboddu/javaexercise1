@@ -29,7 +29,7 @@ public class PalindromeTest {
         //Act
         String result= palindrome.palindrome(66633666);
         //Assert
-        assertEquals("The number is palindrome and greater than 25",result);
+        assertNotEquals("The number is not a palindrome",result);
     }
     @Test
     public void givenNumberShouldReturnNotaPalindrome(){

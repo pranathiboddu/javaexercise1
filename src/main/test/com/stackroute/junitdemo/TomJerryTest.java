@@ -32,7 +32,7 @@ public class TomJerryTest {
         //Act
         String result= tomJerry.condition(22);
         //Assert
-        assertEquals("Jerry",result);
+        assertNotEquals("Tom",result);
     }
     @Test
     public void givenNumberShouldReturnError(){

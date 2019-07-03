@@ -48,7 +48,7 @@ public class DefinecharacterTest {
         //Act
         String result= definecharacter.character('9');
         //Assert
-        assertEquals("digit",result);
+        assertNotEquals("lowercase",result);
     }
 
 }
